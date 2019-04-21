@@ -1,0 +1,29 @@
+html
+{
+    background: dodgerblue;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Comfortaa';
+    position: relative;
+}
+
+body
+{
+    margin: 0%;
+    width: 100%;
+    padding: 0%;
+}
+
+.AppVentas
+{
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.AppVentas p1
+{
+    font-size: 52px;
+    color: white;
+    align-content: center;
+}

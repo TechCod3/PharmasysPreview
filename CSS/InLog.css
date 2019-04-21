@@ -1,0 +1,106 @@
+body
+{
+  padding: 0;
+  margin: 0;
+  background-color: teal;
+  font-family: 'Comfortaa';
+}
+
+.loader
+{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+  opacity: .8;
+}
+
+.FormLogin
+{
+  width: 400px;
+  height: 400px;
+  padding: 1em;
+  background: #ffffff;
+  border-radius: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.FormLogin .logo
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: -75px;
+  left: calc(50% - 75px);
+}
+
+form div
+{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form
+{
+  padding: calc(50% - 77px) 0 0 0;
+}
+
+label
+{
+  display: block;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  color: teal;
+  font-weight: bold;
+}
+
+form  input
+{
+  padding-top: 5px;
+  padding-bottom: 2px;
+  width: 100%;
+  font-size: 17px;
+  background: transparent;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: gainsboro;
+}
+
+input:focus
+{
+  border-color: teal;
+}
+
+.FormLogin button
+{
+  width: 140px;
+  position: absolute;
+  left: calc(50% - 70px);
+  bottom: 50px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  height: 40px;
+  font-size: 18px;
+  color: #ffffff;
+  background: teal;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.FormLogin button:hover
+{
+  cursor: pointer;
+  background: rgb(0, 95, 95);
+}
