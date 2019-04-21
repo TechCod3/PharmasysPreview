@@ -138,7 +138,7 @@
                 }
 
             } else {
-                echo "Error al insertar la compra.";
+                echo "Error al insertar la compra."; 
             }
     }
 insertProd();
