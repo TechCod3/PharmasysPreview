@@ -138,7 +138,7 @@
                 }
 
             } else {
-                echo "No todo bien prro :c";
+                echo "Error al insertar la compra.";
             }
     }
 insertProd();
