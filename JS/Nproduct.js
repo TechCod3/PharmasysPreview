@@ -4,7 +4,6 @@ var d = document.getElementById("DtProduct");
     var Cn = document.getElementById("NewProductQuery");
     var d2 = document.getElementById("NpQ");
     var d3 = document.getElementById("SearchBoxProduct");
-    var d4 = document.getElementById("BselectIn");
 
 $(document).ready(function()
 {
@@ -31,13 +30,11 @@ $('#NewProductQuery').on('click', function()
         tname.disabled = false;
         d2.style.fontWeight = "bold";
         d3.disabled = true;
-        d4.disabled = true;
     } else{
         d.hidden = true;
         d1.hidden = true;
         tname.disabled = true;
         d2.style.fontWeight = "400";
         d3.disabled = false;
-        d4.disabled = false;
     }
 })  

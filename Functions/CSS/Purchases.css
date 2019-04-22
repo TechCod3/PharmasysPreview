@@ -159,7 +159,9 @@ body
 #SearchBoxProduct
 {
     text-align: left;
-    width: 60%;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .DataInsertProduct

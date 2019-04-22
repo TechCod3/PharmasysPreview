@@ -135,6 +135,8 @@
                         }
                 }
 
+                } else {
+                    print_r("<script>alert('Faltan algunos caracteres para procesar la compra.'); </script>");
                 }
 
             } else {
