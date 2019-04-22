@@ -22,13 +22,10 @@ $(document).ready(function()
             var id = document.getElementById("idP").innerText;
             var Cantidad = 0;
 
-            if ((FacCheck.checked) && (!NitCheck.checked)){
-                
-                Cantidad = 2;
-
-            } else{
-
+            if (NitCheck.checked){
                 Cantidad = 1;
+            } else{
+                Cantidad = 2;
             }
 
             if (Cantidad != 0) {
@@ -53,7 +50,6 @@ $(document).ready(function()
                             $($(this)).val('');
                         })
                         $('#resp').html(resultado);
-                        alert(resultado);
                     })
                     .fail(function(){
                         alert("El producto no fue ingresado correctamente");
@@ -67,8 +63,10 @@ $(document).ready(function()
                 alert("Cantidad no especifíca a donde ingresar");
             }
 
-        } else{
-            alert("No cumple con los datos suficientes para ingresas una compra");
+        } else if (Newprod.checked) {
+
+            alert("Usted se esta a punto de procesar un nuevo producto a su inventario y bodega.");
+            
         }
     })
 })

@@ -16,7 +16,7 @@ function Scant(){
         }
     }else {
         echo "--------";
-        printf("<script type='text/javascript'>alert('No Existe el código en bodega'); </script>");
+        print_r("<script type='text/javascript'>alert('No Existe el código en bodega'); </script>");
     }
 }
 

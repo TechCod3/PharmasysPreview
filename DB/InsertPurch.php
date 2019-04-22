@@ -19,7 +19,6 @@
             {
                 if(($IdP) && ($pcant) && ($ppurch) && ($psold) && ($pstock) && ($pdate) && ($pprov) && ($pfact) && ($pdatefac))
                 {
-
                     try {
                         $c1 = "SELECT cantidad FROM tbinventario WHERE idproducto = '$IdP' AND idsucursal = 5";
                         $qc1 = sqlsrv_query($conn, $c1);
@@ -127,7 +126,7 @@
                                 $APe2 = sqlsrv_execute($sqlR2);
         
                                 echo "Todo bien prro xd";
-                                printf("<script type='text/javascript'>alert('Todo bien prro xd')</script>");
+                                print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
                             } catch (sqlsrv_Exception $e){
                                 print("Error connecting to SQL Server.");
                                 die(print_r($e));

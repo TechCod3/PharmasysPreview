@@ -4,12 +4,12 @@ $(document).ready(function()
         var fecha = new Date();
         var mes = fecha.getMonth()+1;
         var dia = fecha.getDate();
-        var ano = fecha.getFullYear();
+        var year = fecha.getFullYear();
         if(dia<10)
           dia='0'+dia;
         if(mes<10)
           mes='0'+mes
-        $('#DayToPurchase').val(ano+"-"+mes+"-"+dia);
+        $('#DayToPurchase').val(year+"-"+mes+"-"+dia);
       }
       
     $('#SearchBoxProduct').on('keyup', function(){
