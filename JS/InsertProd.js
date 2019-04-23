@@ -22,13 +22,16 @@ $(document).ready(function()
             var id = document.getElementById("idP").innerText;
             var Cantidad = 0;
 
-            if (NitCheck.checked){
+            if ((!FacCheck.checked) && (NitCheck.checked)){
+                
                 Cantidad = 1;
+
             } else{
+
                 Cantidad = 2;
             }
 
-            if (Cantidad != 0) {
+            if (Cantidad) {
                 if((Pdatefact!="")&&(Pprov!="")&&(Pfact!="")&&(Pcant!="")&&(Ppurch!="")&&(Psold!="")&&(Pstock!="")&&(Pdate!=""))
                 {
                     $.ajax({
