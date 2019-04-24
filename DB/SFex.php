@@ -12,11 +12,22 @@ function Fex(){
     if($rf === TRUE)
     {
         while($fr = sqlsrv_fetch_array($fq)){
-            echo "Fecha de vencimiento actual:<br>".$fr['fecha']->format('d/m/Y')."</br>";
+
+            $fechaEx = $fr['fecha']->format('d/m/Y');
+
+            if (($fechaEx === "01/01/2999") || ($fechaEx === "31/12/2099")) {
+                
+                echo "Fecha de vencimiento actual:<br><b>Este producto NO EXPIRA.</b></br>";
+
+            } else {
+
+                echo "Fecha de vencimiento actual:<br><b>".$fechaEx."</b></br>";
+
+            }
         }
     }else{
         echo "--------";
-        printf("<script type='text/javascript'>alert('No Existe el código en bodega');</script>");
+        print_r("<script type='text/javascript'>alert('No Existe el código en bodega');</script>");
     }
 }
 

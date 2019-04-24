@@ -31,6 +31,10 @@ $(document).ready(function()
                 Cantidad = 2;
             }
 
+            if (Pdate === "") {
+                Pdate = "2999-01-01";
+            }
+
             if (Cantidad) {
                 if((Pdatefact!="")&&(Pprov!="")&&(Pfact!="")&&(Pcant!="")&&(Ppurch!="")&&(Psold!="")&&(Pstock!="")&&(Pdate!=""))
                 {
