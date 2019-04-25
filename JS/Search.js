@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-    window.onload = function(){
         var fecha = new Date();
         var mes = fecha.getMonth()+1;
         var dia = fecha.getDate();
@@ -10,7 +9,6 @@ $(document).ready(function()
         if(mes<10)
           mes='0'+mes
         $('#DayToPurchase').val(year+"-"+mes+"-"+dia);
-      }
       
     $('#SearchBoxProduct').on('keyup', function(){
         var search = $('#SearchBoxProduct').val();

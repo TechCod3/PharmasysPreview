@@ -127,6 +127,28 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
                         <label id="FexpireL">Fecha de vencimiento actual</label>
                         </br>
                     </div>
+                    <div class="DatExtNewProd">
+                        <div class="DatBoxNewProd">
+                            <div class="PriceBox">
+                                <label>Precio de Caja: </label>
+                                <input id="PricefBox" type="number" placeholder="0">
+                            </div>
+                            <div class="CantBox">
+                                <label>Cantidad de Caja: </label>
+                                <input id="CantfBox" type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="DatBlisNewProd">
+                            <div class="PriceBlis">
+                                <label>Precio de Blister: </label>
+                                <input id="PricefBlis" type="number" placeholder="0">
+                            </div>
+                            <div class="CantBlis">
+                                <label>Cantidad de Blister: </label>
+                                <input id="CantfBlis" type="number" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
                     <div class="AddProduct">
                         <button id="BaddProduct" type="button">Agregar Producto</button>
                     </div>

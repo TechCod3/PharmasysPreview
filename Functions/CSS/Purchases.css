@@ -154,6 +154,7 @@ body
 {
     float: left;
     width: 40%;
+    text-align: center;
 }
 
 #SearchBoxProduct
@@ -218,6 +219,11 @@ body
     border: 0;
     border-radius: 10px;
     box-shadow: 0px 5px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#Producto
+{
+    text-align: left;
 }
 
 table
@@ -361,7 +367,7 @@ table
 
 .AddProduct
 {
-    margin-top: 30%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -397,5 +403,52 @@ table
 
 .CodeBN input, label
 {
+    text-align: center;
+}
+
+.DatExtNewProd
+{
+    text-align: center;
+}
+
+.DatBoxNewProd
+{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.PriceBox
+{
+    width: 50%;
+    float: left;
+    text-align: center
+}
+
+.CantBox
+{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.DatBlisNewProd
+{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.PriceBlis
+{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.CantBlis
+{
+    width: 50%;
+    float: right;
     text-align: center;
 }

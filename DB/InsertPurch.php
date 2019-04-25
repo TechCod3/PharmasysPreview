@@ -95,9 +95,9 @@
                                 $APe2 = sqlsrv_execute($sqlR2);
         
                                 echo "Todo bien prro xd";
-                                printf("<script type='text/javascript'>alert('Todo bien prro xd')</script>");
+                                print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
                             } catch (sqlsrv_Exception $e){
-                                print("Error al procesar los cambios en la base de datos, porfavor contacte con el soporte. ");
+                                print_r("Error al procesar los cambios en la base de datos, porfavor contacte con el soporte. ");
                                 die(print_r($e));
                             }
                         }
@@ -128,7 +128,7 @@
                                 echo "Todo bien prro xd";
                                 print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
                             } catch (sqlsrv_Exception $e){
-                                print("Error connecting to SQL Server.");
+                                print_r("Error al procesar los cambios en la base de datos, porfavor contacte con el soporte. ");
                                 die(print_r($e));
                             }
                         }

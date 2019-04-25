@@ -77,5 +77,7 @@ $(document).on("click", "#BselectIn", function(){
         })
     
         $('#idP').html(IdProd);
+    } else {
+        alert("No puede agregar una compra si está habilitada la opción para un nuevo producto");
     }
 })
