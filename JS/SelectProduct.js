@@ -75,6 +75,18 @@ $(document).on("click", "#BselectIn", function(){
         .fail(function(){
             $('#Cproduct').html("Error al leer la cantidad en Inventario");
         })
+
+        $.ajax({
+            type: 'POST',
+            url: '../DB/SPBox',
+            data: {'IdProd': IdProd}
+        })
+        .done(function (resultado) {
+            $('#ResultPriceBox').html(resultado);
+        })
+        .fail(function () {
+            alert("Error al consultar al servidor el Precio de Caja");
+        })
     
         $('#idP').html(IdProd);
     } else {

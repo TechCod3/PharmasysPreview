@@ -14,13 +14,13 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/Purchases.css">
+    <script type="text/javascript" src="../JS/jquery.min.js"></script>
 </head>
 <body>
     <div class="AppPurchases">
         <div class="MainOptionsP">
             <button id="BSeePurchases" type="button">Ver Compras</button>
             <button id="BSaldos" type="button">Saldos</button>
-            <button id="BSee" type="button">Ver</button>
             <div class="MainProviders">
                 <form id="ListProvidersF" method="post">
                     <select id="Providers" name="Providers">
@@ -132,20 +132,32 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
                             <div class="PriceBox">
                                 <label>Precio de Caja: </label>
                                 <input id="PricefBox" type="number" placeholder="0">
+                                <br>
+                                <label id="ResultPriceBox">No hay precio de Caja</label>
+                                </br>
                             </div>
                             <div class="CantBox">
                                 <label>Cantidad de Caja: </label>
                                 <input id="CantfBox" type="number" placeholder="0">
+                                <br>
+                                <label id="ResultCantBox">No hay cantidad de Caja</label>
+                                </br>
                             </div>
                         </div>
                         <div class="DatBlisNewProd">
                             <div class="PriceBlis">
                                 <label>Precio de Blister: </label>
                                 <input id="PricefBlis" type="number" placeholder="0">
+                                <br>
+                                <label id="ResultPriceBlis">No hay precio de Blister</label>
+                                </br>
                             </div>
                             <div class="CantBlis">
                                 <label>Cantidad de Blister: </label>
                                 <input id="CantfBlis" type="number" placeholder="0">
+                                <br>
+                                <label id="ResultCantBlis">No hay cantidad de Blister</label>
+                                </br>
                             </div>
                         </div>
                     </div>
@@ -154,7 +166,6 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
                     </div>
                     <label id="resp"></label>
             </div>
-    <script type="text/javascript" src="../JS/jquery.min.js"></script>
     <script type="text/javascript" src="../JS/Search.js"></script>
     <script type="text/javascript" src="../JS/SelectProduct.js"></script>
     <script type="text/javascript" src="../JS/InsertProd.js"></script>
