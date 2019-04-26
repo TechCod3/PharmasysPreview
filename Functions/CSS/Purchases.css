@@ -1,0 +1,447 @@
+html
+{
+    padding: 0;
+    margin: 0;
+    background: gainsboro; 
+    position: relative;
+    font-family: 'Comfortaa';
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    background: gainsboro;
+}
+
+.AppPurchases
+{
+    position: relative;
+    width: 100%;
+    background: gainsboro;
+}
+
+.AppPurchases input
+{
+    border-radius: 15px;
+    text-align: center;
+}
+
+.AppPurchases button
+{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 5px 15px;
+    background: teal;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+.MainOptionsP
+{
+    overflow: hidden;
+    padding: 2em;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: rgba(0, 177, 190, 0.568);
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#BSeePurchases
+{
+    float: left;
+    margin-right: 20px;
+}
+
+#BSaldos
+{
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.MainProviders
+{
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.MainTypePurchases
+{
+    float: left;
+    font-weight: 800;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#PerInvoice
+{
+    cursor: pointer;
+}
+
+#ByNit
+{
+    cursor: pointer;
+}
+
+#PerInvoiceL
+{
+    cursor: pointer;
+}
+
+#ByNitL
+{
+    cursor: pointer;
+}
+
+#Number_Invoice
+{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#PrimaryOption
+{
+    color: gainsboro;
+}
+
+.SecondaryOptionsRequest
+{
+    overflow: hidden;
+    border: 0;
+    padding: 3em;
+    margin-bottom: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 1em;
+    background: dodgerblue;
+}
+
+.ProductNewInsertQuery
+{
+    margin-bottom: 1em;
+    width: 50%
+}
+
+.ProductNewInsertQuery label
+{
+    color: white;
+    cursor: pointer;
+}
+
+#NewProductQuery
+{
+    cursor: pointer;
+}
+
+.SearchProd
+{
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+#SearchBoxProduct
+{
+    text-align: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.DataInsertProduct
+{
+    margin-left: 4em;
+    float: right;
+    color: white;
+    width: 54%;
+}
+
+.CantProduct
+{
+    margin-top: 2em;
+}
+
+.PurchaseProduct
+{
+    margin-top: 2em;
+    text-align: center;
+    float: left;
+    width: 50%;
+}
+
+.SoldProducts
+{
+    margin-top: 2em;
+    text-align: center;
+    float: right;
+    width: 50%;
+}
+
+.MineStockProduct
+{
+    margin-top: 1.5em;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+.DateExpireProduct
+{
+    margin-top: 1.5em;
+    float: right;
+    text-align: center;
+    width: 50%;
+}
+
+#productoslist
+{
+    overflow: auto;
+    height: 500px;
+    margin-top: 1em;
+    background: whitesmoke;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#Producto
+{
+    text-align: left;
+}
+
+table
+{
+    color: teal;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+#OptionBS
+{
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+#EditPurch
+{
+    width: 8%;
+    text-align: center;
+}
+
+#Products_list button
+{
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 2px 1.5px 1.5px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    background: white;
+    width: 40px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Products_list button:focus
+{
+    box-shadow: none;
+    background: dodgerblue;
+    outline: none;
+}
+
+#Products_list button:focus img
+{
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAGfQAABn0BoBVGiAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJRSURBVHic7d2/ThRRHMXx87Piz0ZpbChNFOID+BjEB4DeWhJDbEx8Chst4AF8EU0sRFjAgBY2VpJsopJwbIZosezccWbOnb2cT0ku5PDNZLKbDAtgZmZmZmbFIzkiuZh7R5FIrpB8SfIr/xqTfEHyTu59RSD5kOQXXu+Y5L3cO+dadZs4mRH5yr5vJy2QfJ4Q+cqz3HvnFskPDUK/z713lsg9YBaSEwBLiccnETHqc08bQw/NJucjYrC/z63cA24KhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFokUbPQZAcAXgCYBPAKoC7fYwasO8AvgHYA/AqIiap35gcmuQ6gLcA1hvPK9MBgMcRcZRyOCk0ydsA3gG432JYicYAHkXEed3B1Hv0Nhx5mjUAT1MOpl7RnwH4Ye/pTiKi9iKsDU1yAcAEfoVynUsASxHxa9ahlHiX3ewpFpHQqDZ0RPwGcNbBoFKdRsRF3aHU28HrlmNK9iblkF/etdPty7vqB20AOGw5rCQHADZSIgP//xZ8C8ADAAuN5823nwCOAOyir7fgOfhvWKwxhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFokaGHTnoKqPKjtxUdGHro4wZnx72t6MDQQ+82OLvX24rSkVwm+SnhQ7o/kkz9nGmbhuRaTex9kn6cuAvVlb1D8uyfwKfV15Zz7ysSyUX6P1SYmZmZmd0IfwARN5dUzMzykQAAAABJRU5ErkJggg==");
+}
+
+#Products_list button img
+{
+    width: 30px;
+    height: 30px;
+}
+
+#productoslist::-webkit-scrollbar
+{
+    display: none;
+}
+
+
+#Products_list th
+{
+    color: white;
+    background: teal;
+}
+
+#Products_list #Products:nth-child(even)
+{
+    background: teal;
+    color: white;
+}
+
+#Products_list #id_prod
+{
+    width: 10%;
+    border-right: 1px solid white;
+    border-bottom: 2px solid white;
+    text-align-last: center;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+#Products_list #prod_name
+{
+    width: 82%;
+    border-left: 1px solid white;
+    border-bottom: 2px solid white;
+    text-align-last: center;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+#Products_list #idProd
+{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#Products_list #Producto
+{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#ProductName
+{
+    width: 85%;
+    text-align: center;
+}
+
+.NaO
+{
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.NameProduct
+{
+    width: 100%;
+    text-align: center;
+}
+
+.OpProd
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.AddProduct
+{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.DataProduct
+{
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.DataProduct label
+{
+    color: white;
+}
+
+.CodeN
+{
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+.CodeN input, label
+{
+    text-align: center;
+}
+
+.CodeBN
+{
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+.CodeBN input, label
+{
+    text-align: center;
+}
+
+.DatExtNewProd
+{
+    text-align: center;
+}
+
+.DatBoxNewProd
+{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.PriceBox
+{
+    width: 50%;
+    float: left;
+    text-align: center
+}
+
+.CantBox
+{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.DatBlisNewProd
+{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.PriceBlis
+{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.CantBlis
+{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
