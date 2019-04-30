@@ -173,5 +173,6 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
     <script type="text/javascript" src="../JS/CasS.js"></script>
     <script type="text/javascript" src="../JS/CatS.js"></script>
     <script type="text/javascript" src="../JS/Nproduct.js"></script>
+    <script type="text/javascript" src="../JS/SeePurchases.js"></script>
 </body>
 </html>

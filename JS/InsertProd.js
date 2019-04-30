@@ -80,7 +80,7 @@ $(document).ready(function()
 
         } 
         
-        if (Newprod.checked === true) {
+        if (Newprod.checked) {
 
             var Pname = $('#ProductName').val();
             var Pcategoria = $('#CatPN').val();

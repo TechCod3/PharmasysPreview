@@ -18,12 +18,8 @@ function IDnew(){
 
                 echo "$idNew";
 
-            } else {
-                
-                print_r("<script type='text/javascript'>alert('Ocurrió un error al intentar mostrar automáticamente el id del producto nuevo.'); </script>");
-
             }
-
+            
         } else {
             
             print_r("<script type='text/javascript'>alert('Ocurrió un error al obtener el útlimo id de los productos'); </script>");

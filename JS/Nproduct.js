@@ -13,6 +13,19 @@ $(document).ready(function()
             tname.disabled = false;
             d2.style.fontWeight = "bold";
             d3.disabled = true;
+
+            $.ajax({
+                type: 'POST',
+                url: '../DB/IDforProductNew.php',
+                data: {'RequesID': 'Search'}
+            })
+            .done(function (resultado) {
+                $('#CodeProductNew').val(resultado);
+            })
+            .fail(function(){
+                alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
+            })
+
         } else{
             d.hidden = true;
             d1.hidden = true;
@@ -20,19 +33,6 @@ $(document).ready(function()
             d2.style.fontWeight = "400";
             d3.disabled = false;
         }
-
-        $.ajax({
-            type: 'POST',
-            url: '../DB/IDforProductNew.php',
-            data: {'RequesID': 'Search'}
-        })
-        .done(function (resultado) {
-            alert(resultado);
-            //$('#CodeProductNew').val(resultado);
-        })
-        .fail(function(){
-            alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
-        })
 })
 
 $('#NewProductQuery').on('click', function()
@@ -43,6 +43,19 @@ $('#NewProductQuery').on('click', function()
         tname.disabled = false;
         d2.style.fontWeight = "bold";
         d3.disabled = true;
+
+        $.ajax({
+            type: 'POST',
+            url: '../DB/IDforProductNew.php',
+            data: {'RequesID': 'Search'}
+        })
+        .done(function (resultado) {
+            $('#CodeProductNew').val(resultado);
+        })
+        .fail(function(){
+            alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
+        })
+
     } else{
         d.hidden = true;
         d1.hidden = true;
@@ -50,17 +63,4 @@ $('#NewProductQuery').on('click', function()
         d2.style.fontWeight = "400";
         d3.disabled = false;
     }
-    
-    $.ajax({
-        type: 'POST',
-        url: '../DB/IDforProductNew.php',
-        data: {'RequesID': 'Search'}
-    })
-    .done(function (resultado) {
-        alert(resultado);
-        //$('#CodeProductNew').val(resultado);
-    })
-    .fail(function(){
-        alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
-    })
 })  

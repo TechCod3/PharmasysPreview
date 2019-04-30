@@ -71,6 +71,8 @@
                         die(print_r($e));
                     }
 
+                if (isset(($Cant1), ($Cant2))) {
+
                 if ($TypeCant === "1") {
 
                     $sql = "UPDATE tbproducto SET preciocompra = ( ?) WHERE idproducto = ( ?)";
@@ -93,7 +95,19 @@
                                 $APe = sqlsrv_execute($sqlR);
                                 $APe1 = sqlsrv_execute($sqlR1);
                                 $APe2 = sqlsrv_execute($sqlR2);
-        
+
+                                if ($APe) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 1.'); </script>");
+                                }
+                                
+                                if ($APe1) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 2.'); </script>");
+                                }
+
+                                if ($APe1) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 3.'); </script>");
+                                }
+
                                 echo "Todo bien prro xd";
                                 print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
                             } catch (sqlsrv_Exception $e){
@@ -124,23 +138,41 @@
                                 $APe = sqlsrv_execute($sqlR);
                                 $APe1 = sqlsrv_execute($sqlR1);
                                 $APe2 = sqlsrv_execute($sqlR2);
+
+                                if ($APe) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 1.'); </script>");
+                                }
+                                
+                                if ($APe1) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 2.'); </script>");
+                                }
+
+                                if ($APe1) {
+                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 3.'); </script>");
+                                }
         
                                 echo "Todo bien prro xd";
                                 print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
+
                             } catch (sqlsrv_Exception $e){
+
                                 print_r("Error al procesar los cambios en la base de datos, porfavor contacte con el soporte. ");
                                 die(print_r($e));
+                                
                             }
                         }
-                }
-
                 } else {
-                    print_r("<script>alert('Faltan algunos caracteres para procesar la compra.'); </script>");
+                    print_r("<script>alert('Falta algun tipo de registro de factura para procesar la compra.'); </script>");
                 }
+            } else {
+                print_r("<script>alert('Faltan algunos caracteres para procesar la compra.'); </script>");
+            }
 
             } else {
                 echo "Error al insertar la compra.";
             }
     }
+    }
+
 insertProd();
 ?>
