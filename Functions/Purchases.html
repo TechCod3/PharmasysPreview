@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Pharmasys | Compras | Ver Compras</title>
+        <link rel="shorcut icon" href="../img/2ffac600bf44b92fb9a3dde19f603ada.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:400" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="CSS/Bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Bootstrap/bootstrap.min.css">
         <script type="text/javascript" src="../JS/jquery.min.js"></script>
     </head>
     <body>
@@ -16,6 +17,14 @@
                 <header>Verificación de Factura</header>
             </nav>
             <div class="ViewApp">
+                <div class="">
+
+                </div>
+                <div class="FilterInvoice">
+                    <div class="SearchInvoice">
+                        <input id="SearchBox" type="search" placeholder="Buscar factura...">
+                    </div>
+                </div>
                 <div class="DataApp">
                     <div class="FilterDataApp">
                     </div>
@@ -31,6 +40,12 @@
                                 <th>Precio de Venta</th>
                             </tr>
                         </table>
+                    </div>
+                    <div class="EditRowsDataApp">
+                        <input id="CantPurchase" type="number" placeholder="Cantidad Comprada">
+                        <input id="PricePurchase" type="number" placeholder="Precio de Compra">
+                        <input id="PriceSold" type="number" placeholder="Precio de Venta">
+                        <input id="DateExpire" type="date">
                     </div>
                 </div>
                 <div class="OptionsDataApp">
@@ -48,5 +63,5 @@
         </div>
     </body>
     <script type="text/javascript" src="../JS/ViewPurchase.js"></script>
-    <script type="text/javascript" src="../JS/"></script>
+    <script type="text/javascript" src="../JS/SelectPurch.js"></script>
 </html>

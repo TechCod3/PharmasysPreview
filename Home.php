@@ -10,6 +10,7 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pharmasys | Sistema de venta de farmacias.</title>
+    <link rel="shorcut icon" href="img/2ffac600bf44b92fb9a3dde19f603ada.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css">
