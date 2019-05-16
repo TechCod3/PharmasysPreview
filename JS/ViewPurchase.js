@@ -2,11 +2,11 @@ $(document).ready(function(){
 
     $.ajax({
         type: 'POST',
-        url: '../DB/SeePurchases.php',
-        data: {'ShowPurchases': 'AllPurchases'}
+        url: '../DB/SeeDataPurchases.php',
+        data: {'DataPurchase': 'AllPurchases'}
     })
     .done(function (resultado){
-        $('.RowsDataApp').html(resultado);
+        $('.DataPurch').html(resultado);
     })
     .fail(function(){
         alert("Ocurrió un error al intentar solicitar los datos de la última factura.");
@@ -17,4 +17,3 @@ $(document).ready(function(){
         window.location.replace("Purchases.php");
     })
 })
-

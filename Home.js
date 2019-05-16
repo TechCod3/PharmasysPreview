@@ -29,7 +29,7 @@ BInventories.addEventListener("click", SInventories);
 function SInventories()
 {
     TitleFunction.innerText = "Inventarios";
-    VFunction.setAttribute("src", "Functions/Inventories.php");
+    VFunction.setAttribute("src", "Functions/Inventories.html");
 }
 
 BCloseTheBox.addEventListener("click", SClosebox);

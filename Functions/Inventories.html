@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pharmasys | Compras | Ver Compras</title>
+    <link rel="shorcut icon" href="../img/2ffac600bf44b92fb9a3dde19f603ada.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/Inventories.css">
+    <script type="text/javascript" src="../JS/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="AppManager">
+            <div class="AppHeader">
+                <header>
+                    <select id="SelectSucursal">
+                        <option value="0" disabled selected>Seleccione la Sucursal</option>
+                    </select>
+                    <input id="SearchProduct" type="search" placeholder="Buscar...">
+                    <button id="SeeAll">Ver Todo</button>
+                    <button id="Integrity">Integridad</button>
+                </header>
+            </div>
+            <div class="AppDataView">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Venta</th>
+                            <th>Vencimiento</th>
+                            <th>Compra</th>
+                            <th>Ubicación</th>
+                        </tr>
+                        <tr id="DataInventorie">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="AppDataEdit">
+                <div class="LocalizeProduct">
+                    <fieldset>
+                        <legend>Ubicación</legend>
+                        <div>
+                            <label for="IDestante">Estante</label>
+                            <br>
+                            <input id="IDestante" type="text">
+                        </div>
+                        <div>
+                            <label for="IDnivel">Nivel</label>
+                            <br>
+                            <input id="IDnivel" type="text">
+                        </div>
+                        <div>
+                            <label for="IDcaja">Caja</label>
+                            <br>
+                            <input id="IDcaja" type="text">
+                        </div>
+                        <br>
+                        <button>Actualizar</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Precio Especial</legend>
+                        <div>
+                            <label>Precio</label>
+                            <br>
+                            <label>Cantidad</label>
+                            <br>
+                            <label>Fecha</label>
+                        </div>
+                        <div>
+                            <div>
+                                <label>Unidad</label>
+                                <br>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label>Bliste</label>
+                                <br>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label>Caja</label>
+                                <br>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="CantidadEdit">
+                            <div class="CantidadCaja">
+                                <input type="text">
+                            </div>
+                            <div class="CantidadBlister">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="DateEdit">
+                            <input type="date">
+                        </div>
+                            <button>Actualizar</button>
+                    </fieldset>
+                </div>
+                <div class="ActionsInventories">
+                    <button>Editar Producto</button>
+                    <button>SAT</button>
+                    <button>Juntar Códigos</button>
+                    <button>Iniciar Inventario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src=""></script>
+</body>
+</html>

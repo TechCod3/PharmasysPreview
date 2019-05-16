@@ -11,10 +11,13 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pharmasys | Compras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shorcut icon" href="../img/2ffac600bf44b92fb9a3dde19f603ada.png">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/Purchases.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../JS/skins/all.css">
     <script type="text/javascript" src="../JS/jquery.min.js"></script>
+    <script type="text/javascript" src="../JS/icheck.js"></script>
 </head>
 <body>
     <div class="AppPurchases">
@@ -169,7 +172,7 @@ $Rproviders = sqlsrv_query($conn, "SELECT * FROM tbproveedor ORDER BY proveedor"
     <script type="text/javascript" src="../JS/Search.js"></script>
     <script type="text/javascript" src="../JS/SelectProduct.js"></script>
     <script type="text/javascript" src="../JS/InsertProd.js"></script>
-    <script type="text/javascript" src="../JS//Cpcant.js"></script>
+    <script type="text/javascript" src="../JS/Cpcant.js"></script>
     <script type="text/javascript" src="../JS/CasS.js"></script>
     <script type="text/javascript" src="../JS/CatS.js"></script>
     <script type="text/javascript" src="../JS/Nproduct.js"></script>

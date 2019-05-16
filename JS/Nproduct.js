@@ -33,34 +33,34 @@ $(document).ready(function()
             d2.style.fontWeight = "400";
             d3.disabled = false;
         }
-})
 
-$('#NewProductQuery').on('click', function()
-{
-    if(Cn.checked){
-        d.hidden = false;
-        d1.hidden = false;
-        tname.disabled = false;
-        d2.style.fontWeight = "bold";
-        d3.disabled = true;
+        $('#NewProductQuery').on('ifClicked', function()
+        {
+            if(!Cn.checked){
+                d.hidden = false;
+                d1.hidden = false;
+                tname.disabled = false;
+                d2.style.fontWeight = "bold";
+                d3.disabled = true;
 
-        $.ajax({
-            type: 'POST',
-            url: '../DB/IDforProductNew.php',
-            data: {'RequesID': 'Search'}
-        })
-        .done(function (resultado) {
-            $('#CodeProductNew').val(resultado);
-        })
-        .fail(function(){
-            alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
-        })
+            $.ajax({
+                type: 'POST',
+                url: '../DB/IDforProductNew.php',
+                data: {'RequesID': 'Search'}
+            })
+            .done(function (resultado) {
+                $('#CodeProductNew').val(resultado);
+            })
+            .fail(function(){
+                alert("Ocurrió un error al solicitar al servidor un id automático para el nuevo producto");
+            })
 
-    } else{
-        d.hidden = true;
-        d1.hidden = true;
-        tname.disabled = true;
-        d2.style.fontWeight = "400";
-        d3.disabled = false;
-    }
+        } else{
+            d.hidden = true;
+            d1.hidden = true;
+            tname.disabled = true;
+            d2.style.fontWeight = "400";
+            d3.disabled = false;
+        }
 })  
+})

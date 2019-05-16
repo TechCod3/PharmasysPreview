@@ -6,46 +6,57 @@ function SeeCant()
 {
     $conn = Conexion();
 
-    if (isset($_POST['IdPurchase'])) {
+    if (isset(($_POST['IdPurchase']), ($_POST['TypeOfInvoice']))) {
         
         $ID = addslashes($_POST['IdPurchase']);
+        $TipoFactura = addslashes($_POST['TypeOfInvoice']);
 
-        if ($ID != 0) {
-            
-            try {
-                $sql = "SELECT cantidad, cantidad2 FROM tbcompra WHERE idcompra = $ID";
-                $ExeSQL = sqlsrv_query($conn, $sql);
-                $NumRSQL = sqlsrv_has_rows($ExeSQL);
+        if (isset(($ID), ($TipoFactura))) {
 
-                if ($NumRSQL === TRUE) {
+            if (($ID != "") && ($ID != NULL) && ($ID != 0) && ($TipoFactura != "") && ($TipoFactura != NULL)) {
+                
+                if ($TipoFactura === "Contable") {
                     
-                    while ($ResSQL = sqlsrv_fetch_array($ExeSQL)) {
-                        $cantidad1 = $ResSQL['cantidad'];
-                        $cantidad2 = $ResSQL['cantidad2'];
-
-                        if (($cantidad1 === NULL)) {
-                        
-                            $cantidad1 = 0;
-                        }
-    
-                        if ($cantidad2 === NULL) {
+                    try {
+                        $sql = "SELECT cantidad FROM tbcompra WHERE idcompra = $ID";
+                        $ExeSQL = sqlsrv_query($conn, $sql);
+                        $NumRSQL = sqlsrv_has_rows($ExeSQL);
+        
+                        if ($NumRSQL === TRUE) {
                             
-                            $cantidad2 = 0;
+                            while ($ResSQL = sqlsrv_fetch_array($ExeSQL)) {
+
+                                $cantidad = $ResSQL['cantidad'];
+
+                                echo $cantidad;
+                            }
                         }
-                    }
-
-                    if (($cantidad1 != 0) && ($cantidad2 === 0)) {
+                    } catch (sqlsrv_Exception $e) {
                         
-                        echo $cantidad1;
+                        echo "0000";
+                    }
+                } elseif ($TipoFactura === "No Contable") {
+                    
+                    try {
+                        $sql = "SELECT cantidad2 FROM tbcompra WHERE idcompra = $ID";
+                        $ExeSQL = sqlsrv_query($conn, $sql);
+                        $NumRSQL = sqlsrv_has_rows($ExeSQL);
+        
+                        if ($NumRSQL === TRUE) {
+                            
+                            while ($ResSQL = sqlsrv_fetch_array($ExeSQL)) {
 
-                    } elseif (($cantidad2 != 0) && ($cantidad1 === 0)) {
+                                $cantidad = $ResSQL['cantidad2'];
 
-                        echo $cantidad2;
+                                echo $cantidad;
+
+                            }
+                        }
+                    } catch (sqlsrv_Exception $e) {
+                        
+                        echo "0000";
                     }
                 }
-            } catch (sqlsrv_Exception $e) {
-                
-                echo "0000";
             }
         }
     }

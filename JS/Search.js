@@ -1,5 +1,12 @@
 $(document).ready(function()
 {
+    var search = $('#SearchBoxProduct').val();
+
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_flat',
+        radioClass: 'iradio_flat'
+      });
+
         var fecha = new Date();
         var mes = fecha.getMonth()+1;
         var dia = fecha.getDate();
@@ -11,7 +18,6 @@ $(document).ready(function()
         $('#DayToPurchase').val(year+"-"+mes+"-"+dia);
       
     $('#SearchBoxProduct').on('keyup', function(){
-        var search = $('#SearchBoxProduct').val();
         
         $.ajax({
             type: 'POST',

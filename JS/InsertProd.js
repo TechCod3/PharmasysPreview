@@ -24,10 +24,9 @@ $(document).ready(function()
         var Pid = $('#CodeProductNew').val()
         var PidBar = $('#CodeBarNew').val()
 
-
         if(!Newprod.checked)
         {
-            var id = document.getElementById("idP").innerText;
+            var id = document.getElementById("idP").innerHTML;
             var Cantidad = 0;
 
             if ((!FacCheck.checked) && (NitCheck.checked)){
@@ -61,9 +60,6 @@ $(document).ready(function()
                                 'CantNum': Cantidad}
                     })
                     .done(function(resultado){
-                        $(":text").each(function(){
-                            $($(this)).val('');
-                        })
                         $('#resp').html(resultado);
                     })
                     .fail(function(){
@@ -77,8 +73,7 @@ $(document).ready(function()
             } else {
                 alert("Cantidad no especifíca a donde ingresar.");
             }
-
-        } 
+        }
         
         if (Newprod.checked) {
 

@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:400" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Bootstrap/bootstrap.min.css">
         <script type="text/javascript" src="../JS/jquery.min.js"></script>
+        <script type="text/javascript" src="../JS/icheck.js"></script>
     </head>
     <body>
         <div class="container">
@@ -17,8 +18,11 @@
                 <header>Verificación de Factura</header>
             </nav>
             <div class="ViewApp">
-                <div class="">
-
+                <div class="DataPurch">
+                <b><label id="Provider">Proveedor de la Compra</label>
+                    <label id="NumberInvoice">Numero de Factura</label>
+                    <label id="TypeInvoice">Tipo de Factura</label>
+                    <label id="SumTotal">Total</label></b>
                 </div>
                 <div class="FilterInvoice">
                     <div class="SearchInvoice">
@@ -38,24 +42,27 @@
                                 <th>Cantidad</th>
                                 <th>Precio de Compra</th>
                                 <th>Precio de Venta</th>
+                                <th>Opción</th>
                             </tr>
                         </table>
                     </div>
                     <div class="EditRowsDataApp">
-                        <input id="CantPurchase" type="number" placeholder="Cantidad Comprada">
-                        <input id="PricePurchase" type="number" placeholder="Precio de Compra">
-                        <input id="PriceSold" type="number" placeholder="Precio de Venta">
-                        <input id="DateExpire" type="date">
+                        <input id="IDpuchase" type="number" placeholder="Registro de Compra" disabled>
+                        <input id="CantPurchase" type="number" placeholder="Cantidad Comprada" disabled>
+                        <input id="PricePurchase" type="number" placeholder="Precio de Compra" disabled>
+                        <input id="PriceSold" type="number" placeholder="Precio de Venta" disabled>
+                        <input id="DateExpire" type="date" disabled>
+                        <input id="DateBlank" type="checkbox" hidden>
                     </div>
                 </div>
                 <div class="OptionsDataApp">
-                    <button type="button">
+                    <button id="ReturnPurchase" type="button" disabled>
                         Devolver Compra
                     </button>
-                    <button type="button">
+                    <button id="ModifyPurchase" type="button" disabled>
                         Modificar Compra
                     </button>
-                    <button type="button">
+                    <button id="VerifyPurchase" type="button">
                         Verificar Compra
                     </button>
                 </div>
@@ -63,5 +70,8 @@
         </div>
     </body>
     <script type="text/javascript" src="../JS/ViewPurchase.js"></script>
+    <script type="text/javascript" src="../JS/ViewDataPurchase.js"></script>
     <script type="text/javascript" src="../JS/SelectPurch.js"></script>
+    <script type="text/javascript" src="../JS/EditPurchase.js"></script>
+    <script type="text/javascript" src="../JS/ReturnPurchase.js"></script>
 </html>

@@ -1,36 +1,30 @@
-var BFactura = document.getElementById("PerInvoice");
-var BNit = document.getElementById("ByNit");
 var FacL = document.getElementById("PerInvoiceL");
 var NitL = document.getElementById("ByNitL");
 var textRefFacNit = document.getElementById("Number_Invoice");
 
-BFactura.addEventListener("click", SelFactura);
-BNit.addEventListener("click", SelNit);
+$(document).ready(function(){
 
-function SelFactura()
-{
-    BNit.checked = false;
-    if(BFactura.checked)
-    {
+    $('#PerInvoice').on('ifChecked', function(){
+        $('#ByNit').iCheck('uncheck');
         textRefFacNit.disabled = false;
         FacL.style.color = "white";
         NitL.style.color = "Black";
-    }else{
+    })
+
+    $('#PerInvoice').on('ifUnchecked', function(){
         textRefFacNit.disabled = true;
         FacL.style.color = "Black";
-    }
-}
+    })
 
-function SelNit()
-{
-    BFactura.checked = false;
-    if(BNit.checked)
-    {
+    $('#ByNit').on('ifChecked', function(){
+        $('#PerInvoice').iCheck('uncheck');
         textRefFacNit.disabled = false;
         NitL.style.color = "White";
         FacL.style.color = "Black";
-    }else{
+    })
+
+    $('#ByNit').on('ifUnchecked', function(){
         textRefFacNit.disabled = true;
         NitL.style.color = "Black";
-    }
-}
+    })
+})

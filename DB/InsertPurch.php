@@ -17,7 +17,7 @@
             
             if(isset(($IdP),($pcant), ($ppurch), ($psold), ($pstock), ($pdate), ($pprov), ($pfact), ($pdatefac), ($TypeCant)))
             {
-                if(($IdP) && ($pcant) && ($ppurch) && ($psold) && ($pstock) && ($pdate) && ($pprov) && ($pfact) && ($pdatefac))
+                if(($IdP != 0) && ($pcant != 0) && ($ppurch != 0) && ($psold != 0) && ($pdate) && ($pprov != 0) && ($pfact != 0) && ($pdatefac != ""))
                 {
                     try {
                         $c1 = "SELECT cantidad FROM tbinventario WHERE idproducto = '$IdP' AND idsucursal = 5";
@@ -96,18 +96,6 @@
                                 $APe1 = sqlsrv_execute($sqlR1);
                                 $APe2 = sqlsrv_execute($sqlR2);
 
-                                if ($APe) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 1.'); </script>");
-                                }
-                                
-                                if ($APe1) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 2.'); </script>");
-                                }
-
-                                if ($APe1) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 3.'); </script>");
-                                }
-
                                 echo "Todo bien prro xd";
                                 print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
                             } catch (sqlsrv_Exception $e){
@@ -138,18 +126,6 @@
                                 $APe = sqlsrv_execute($sqlR);
                                 $APe1 = sqlsrv_execute($sqlR1);
                                 $APe2 = sqlsrv_execute($sqlR2);
-
-                                if ($APe) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 1.'); </script>");
-                                }
-                                
-                                if ($APe1) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 2.'); </script>");
-                                }
-
-                                if ($APe1) {
-                                    print_r("<script type='text/javascript'>alert('Proceso terminado correctamente 3.'); </script>");
-                                }
         
                                 echo "Todo bien prro xd";
                                 print_r("<script type='text/javascript'>alert('Proceso terminado correctamente.'); </script>");
